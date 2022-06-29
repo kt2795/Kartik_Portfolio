@@ -21,7 +21,7 @@ Independent projects practiced during training to develop python skills for anal
   * The use of dictionaries helps in navigating through the matrix of player's data across the name and year
   * Using pyplot module within the matplotlib package, we chart the data playing with color, marker type, marker size,x ticks and labels
   * We develop our own function using custom dictionaries and for loops for ease of charting of a large dataset with custom requirements
-    * Default charting when the function is passed without parameters is defined
+   * Default charting when the function is passed without parameters is defined
   *Testing of the function is carried out
 ![](https://github.com/kt2795/Kartik_Portfolio/blob/main/images/Plot1.png)
 ![](https://github.com/kt2795/Kartik_Portfolio/blob/main/images/Plot%202.png)
