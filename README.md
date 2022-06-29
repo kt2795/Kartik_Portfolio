@@ -13,7 +13,7 @@ Independent projects practiced during training to develop python skills for anal
   * The project starts with the data on expenses and revenues for all 12 months, in the list data type
   * Project contains calculations around profit, tax, profit after tax, profit margin, mean profit after tax, good or bad months based on whether they are more or less than the mean profit after tax, and finding the best and the worst month  
 
-# Project 3: Basketball Analysis
+# [Project 3: Basketball Analysis](https://github.com/kt2795/Kartik_Portfolio/blob/7756148ddf567bdb142c06a073345ed868e67cc1/Project%203%20Basketball%20Analysis.ipynb)
 * Aim - With the help of a sample pre-prepared dataset available in lists, the project aims to practice the learnings around matrices visualisation
   * The prepared dataset contains information on player's salaries, games, minutes played, field goals, field goals attempts, points, etc.
   * The information is presented in the form of lists. Therefore through the numpy package the lists are converted into matrices using np.array
