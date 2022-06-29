@@ -8,7 +8,7 @@ Independent projects practiced during training to develop python skills for anal
   * The counter updated everytime the number fell between -1 and 1
   * Expected results is that the proportion of random numbers under -1 and 1 is around 68%
 
-[# Project2: Basic financial analysis using lists](https://github.com/kt2795/Kartik_Portfolio/blob/7658dd32a8d4e714aac58fe86383239954fbb679/Project%202:%20Financial%20Analysis%20using%20lists.ipynb)
+# [Project2: Basic financial analysis using lists](https://github.com/kt2795/Kartik_Portfolio/blob/7658dd32a8d4e714aac58fe86383239954fbb679/Project%202:%20Financial%20Analysis%20using%20lists.ipynb)
 * Aim - Advancing further, this project aimed to consolidate learnings on lists, arrays and their respective code by conducting a brief financial analysis
   * The project starts with the data on expenses and revenues for all 12 months, in the list data type
   * Start by calculating profit, tax, profit after tax, profit margin, mean profit after tax, good or bad months based on whether they are more or less than the mean profit after tax, and finding the best and the worst month  
