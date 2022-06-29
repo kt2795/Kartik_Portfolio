@@ -23,5 +23,5 @@
     * Default charting when the function is passed without parameters is defined
   * Testing of the function is carried out
 
-![](https://github.com/kt2795/Kartik_Portfolio/blob/main/images/Plot1.png)
-![](https://github.com/kt2795/Kartik_Portfolio/blob/main/images/Plot%202.png)
+![](/images/Plot1.png)
+![](/images/Plot2.png)
