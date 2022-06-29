@@ -22,7 +22,8 @@
   * We develop our own function using custom dictionaries and for loops for ease of charting of a large dataset with custom requirements
     * Default charting when the function is passed without parameters is defined
   * Testing of the function is carried out
-
+Salary, Kobe Bryant for all years
 ![](/images/Plot1.png)
 
+Field Goals per games for all players for all years
 ![](/images/Plot%202.png)
