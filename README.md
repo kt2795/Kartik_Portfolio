@@ -24,4 +24,5 @@
   * Testing of the function is carried out
 
 ![](/images/Plot1.png)
-![](/images/Plot2.png)
+
+![](/images/Plot%202.png)
