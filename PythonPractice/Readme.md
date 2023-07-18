@@ -1,4 +1,4 @@
-# [Testing the law of large numbers using a random number generator](https://github.com/kt2795/Kartik_Portfolio/blob/951576e68fd6fab74c43d551e271caab78f183c5/Law%20Of%20Large%20Numbers.ipynb)
+# [Testing the law of large numbers using a random number generator](https://github.com/kt2795/Kartik_Portfolio/blob/5efc80a196595b13a378312a2e826378b994ec5c/PythonPractice/Law%20Of%20Large%20Numbers.ipynb)
 * Aim - To practice the learnings on conditional statements, loops and basic arithmetic operations
   * Import the numpy package to use randn function
   * Define N, idea being larger the N, more accurate the results
