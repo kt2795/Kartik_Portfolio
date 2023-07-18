@@ -1,0 +1,5 @@
+error_cv: 4379.525703237012
+best_model: LGBMRegressor()
+best_error: 3830.6626357560885
+Average MAE: 4379.525703237012
+Best MAE: 3830.6626357560885
