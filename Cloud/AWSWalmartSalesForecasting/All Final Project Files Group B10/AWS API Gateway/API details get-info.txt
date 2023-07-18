@@ -1,0 +1,32 @@
+API details
+API ID
+300i0o6rxg
+
+Protocol
+HTTP
+
+Created
+2023-03-14
+
+Description
+No Description
+
+Default endpoint
+Enabled
+
+Routes for get-info
+/AssignmentGroupB10
+ANY
+
+Authorization
+Routes for get-info
+/AssignmentGroupB10
+ANY
+
+Integrations
+/AssignmentGroupB10
+ANY
+AWS Lambda
+
+Stages
+Default

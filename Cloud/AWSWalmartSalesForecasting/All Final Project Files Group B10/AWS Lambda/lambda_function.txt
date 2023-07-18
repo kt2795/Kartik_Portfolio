@@ -1,0 +1,46 @@
+import io
+import base64
+
+def download_latest_output_files():
+    # Connect to the Amazon S3 client
+    s3 = boto3.client('s3')
+    
+    # Get the latest predictions CSV file
+    response = s3.list_objects_v2(Bucket='aws-ml-groupb10', Prefix='output/predictions_')
+    latest_prediction = max(response['Contents'], key=lambda x: x['LastModified'])
+    latest_prediction_key = latest_prediction['Key']
+    latest_prediction_obj = s3.get_object(Bucket='aws-ml-groupb10', Key=latest_prediction_key)
+    latest_prediction_body = latest_prediction_obj['Body'].read()
+    
+    # Get the latest output text file
+    response = s3.list_objects_v2(Bucket='aws-ml-groupb10', Prefix='output/output_')
+    latest_output = max(response['Contents'], key=lambda x: x['LastModified'])
+    latest_output_key = latest_output['Key']
+    latest_output_obj = s3.get_object(Bucket='aws-ml-groupb10', Key=latest_output_key)
+    latest_output_body = latest_output_obj['Body'].read()
+    
+    # Create a zip file with the latest CSV and text files
+    in_memory_output = io.BytesIO()
+    with zipfile.ZipFile(in_memory_output, 'w') as zf:
+        zf.writestr(latest_prediction_key.split('/')[-1], latest_prediction_body)
+        zf.writestr(latest_output_key.split('/')[-1], latest_output_body)
+    in_memory_output.seek(0)
+    
+    return base64.b64encode(in_memory_output.read())
+
+def lambda_handler(event, context):
+    # Download the latest output files from S3 and create a ZIP file
+    zip_file = download_latest_output_files()
+    
+    # Return the ZIP file as a binary response
+    return {
+        'statusCode': 200,
+        'body': zip_file.decode('utf-8'),
+        'isBase64Encoded': True,
+        'headers': {
+            'Content-Type': 'application/zip',
+            'Content-Disposition': 'attachment; filename="latest_output.zip"',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*'
+        }
+    }
