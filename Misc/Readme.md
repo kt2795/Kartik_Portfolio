@@ -24,8 +24,8 @@
 
 Salary, Kobe Bryant for all years
 
-![](/Images/Plot1.png)
+![](/images/Plot1.png)
 
 Field Goals per games for all players for all years
 
-![](/Images/Plot2.png)
+![](/images/Plot2.png)
