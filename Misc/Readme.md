@@ -24,4 +24,4 @@
 
 Salary, Kobe Bryant for all years
 
-![](/images/Plot1.png)
+![](/Images_Plots_Graphs/Plot1.png)
