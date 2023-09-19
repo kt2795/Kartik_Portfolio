@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Influencer Valuation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 40px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 200px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Influencer Valuation</h1>
+    <form method="POST" action="/valuation">
+        <label for="reach">Reach (Audience per Video):</label>
+        <input type="number" step="1" id="reach" name="reach" required placeholder="Enter audience count per video" min="1"><br>
+        <span>Example: 20000</span>
+        <span>Acceptable range: 1 and above</span>
+        <p>The reach represents the number of people who view each video. Enter the audience count per video.</p><br>
+
+        <label for="growth_rate">Growth Rate (Monthly %):</label>
+        <input type="number" step="0.01" id="growth_rate" name="growth_rate" required placeholder="Enter growth rate in percentage" min="0"><br>
+        <span>Example: 10%  </span>
+        <span>Acceptable range: 0 and above  </span>
+        <p>The growth rate indicates the monthly percentage increase in the influencer's audience size.  </p><br>
+
+        <label for="engagement_rate">Engagement Rate (%):</label>
+        <input type="number" step="0.01" id="engagement_rate" name="engagement_rate" required placeholder="Enter engagement rate in percentage" min="0"><br>
+        <span>Example: 5%  </span>
+        <span>Acceptable range: 0 and above  </span>
+        <p>The engagement rate represents the percentage of the audience that actively engages with the influencer's content through likes, comments, and shares.  </p><br>
+
+        <label for="future_months">Future Months:</label>
+        <input type="number" step="1" id="future_months" name="future_months" required placeholder="Enter the number of future months" min="1"><br>
+        <span>Example: 6  </span>
+        <span>Acceptable range: 1 and above  </span>
+        <p>The future months indicate the number of months into the future for projecting the influencer's earnings and valuation.  </p><br>
+
+        <label for="discount_rate">Discount Rate (%):  </label>
+        <input type="number" step="0.01" id="discount_rate" name="discount_rate" required placeholder="Enter discount rate in percentage  " min="0"><br>
+        <span>Example: 30  </span>
+        <span>Acceptable range: 0 and above  </span>
+        <p>The discount rate is the percentage used to adjust the future earnings and valuation to account for risk and time value of money.  </p><br>
+
+        <label for="valuation_ip_assets">Valuation of IP Assets:</label>
+        <input type="number" step="0.01" id="valuation_ip_assets" name="valuation_ip_assets" required placeholder="Enter the valuation of IP assets" min="0"><br>
+        <span>Example: 100000  </span>
+        <span>Acceptable range: 0 and above  </span>
+        <p>The valuation of IP assets represents the estimated value of the influencer's intellectual property, such as their brand, content, and market potential.  </p><br>
+
+        <label for="num_shares">Number of Shares:</label>
+        <input type="number" step="1" id="num_shares" name="num_shares" required placeholder="Enter the number of shares" min="1"><br>
+        <span>Example: 10000  </span>
+        <span>Acceptable range: 1 and above  </span>
+        <p>The number of shares indicates the desired quantity of shares for dividing the influencer's valuation.  </p><br>
+
+        <input type="submit" value="Calculate Valuation">
+    </form>
+{% if future_earnings %}
+<h2>Valuation Results:</h2>
+<div>
+    <p><strong>Future Earnings:</strong> ${{ future_earnings | round(2) }}</p>
+    <p><strong>Total Future Value:</strong> ${{ total_future_value | round(2) }}</p>
+    <p><strong>Discounted Future Value:</strong> ${{ discounted_future_value | round(2) }}</p>
+    <p><strong>Price per Share:</strong> ${{ price_per_share | round(2) }}</p>
+</div>
+{% endif %}
+
+</body>
+</html>
