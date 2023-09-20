@@ -3,3 +3,4 @@
 ![](/Images_Plots_Graphs/Influencer_Valuation/3.png)
 ![](/Images_Plots_Graphs/Influencer_Valuation/4.png)
 ![](/Images_Plots_Graphs/Influencer_Valuation/5.png)
+![](/Images_Plots_Graphs/Influencer_Valuation/6.png)
